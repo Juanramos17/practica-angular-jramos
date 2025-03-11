@@ -1,0 +1,98 @@
+.container {
+    max-width: 900px;
+    min-height: 90vh;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  .input-group {
+    margin-bottom: 30px;
+  }
+  
+  .form-label {
+    font-size: 1.1rem;
+  }
+  
+  input.form-control {
+    border-radius: 10px;
+    border: 1px solid #ced4da;
+  }
+  
+  input.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.25rem rgba(38, 143, 255, 0.25);
+  }
+  
+  button {
+    padding: 12px 18px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .card {
+    border-radius: 10px;
+    border: none;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 1.1rem;
+  }
+  
+  .card-body .btn {
+    background-color: #17a2b8;
+    color: white;
+    font-size: 1.1rem;
+    padding: 12px 18px;
+    border-radius: 8px;
+    width: auto;
+    border: none;
+  }
+  
+  .card-body .btn:hover {
+    background-color: #138496;
+  }
+  
+  .card-body .btn:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .card img {
+    object-fit: cover;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+  
+    h2 {
+      font-size: 1.8rem;
+    }
+  
+    .card-body {
+      padding: 15px;
+    }
+  
+    .card-title {
+      font-size: 1.1rem;
+    }
+  }
+  

@@ -8,24 +8,31 @@ import { IPelicula } from '../models/ipeliculas';
   providedIn: 'root'
 })
 export class PeliculaService {
-  private apiKey: string = '4988f59e';  // Tu API key de OMDB
+  private apiKey: string = '4988f59e';
   private url: string = 'https://www.omdbapi.com/';
 
   constructor(private http: HttpClient) {}
 
-  buscarPeliculas(titulo: string): Observable<IPelicula[]> {
-    const parametros = `?apikey=${this.apiKey}&type=movie&s=${titulo}`;
+  buscarPeliculas(titulo: string, tipo: 'movie' | 'series' | 'all' = 'all'): Observable<IPelicula[]> {
+    let parametros = `?apikey=${this.apiKey}&s=${titulo}`;
+
+    if (tipo !== 'all') {
+      parametros += `&type=${tipo}`;
+    }
+
     return this.http.get<any>(this.url + parametros).pipe(
-      map((response) => {
-        console.log('Respuesta de la API:', response);  // Verifica lo que contiene la respuesta
-        if (response.Response === 'True' && response.Search) {
-          return response.Search as IPelicula[];
-        } else {
-          // Si la API no tiene resultados, lanza un error
-          return [];
-        }
-      })
+      map((response) => response.Search ? response.Search as IPelicula[] : []) 
     );
   }
+
+  obtenerDetalles(id: string): Observable<IPelicula> {
+    return this.http.get<IPelicula>(`${this.url}?apikey=${this.apiKey}&i=${id}`);
+  }
+
+obtenerPeliculaPorId(imdbID: string): Observable<any> {
+  const parametros = `?apikey=${this.apiKey}&i=${imdbID}`; 
+  return this.http.get<any>(this.url + parametros);
+}
+
   
 }

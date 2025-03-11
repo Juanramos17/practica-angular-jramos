@@ -1,0 +1,123 @@
+/* Jumbotron personalizado */
+.custom-jumbotron {
+    background-color: #007bff;
+    color: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    margin-bottom: 50px;
+  }
+  
+  .custom-jumbotron h1 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  
+  .custom-jumbotron .lead {
+    font-size: 1.3rem;
+    font-weight: 300;
+  }
+  
+  /* Botón personalizado */
+  .custom-btn {
+    background-color: #ffffff;
+    color: #007bff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .custom-btn:hover {
+    background-color: #f8f9fa;
+    color: #0056b3;
+  }
+  
+  /* Tarjetas personalizadas */
+  .custom-card {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .custom-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .custom-card img {
+    border-radius: 12px 12px 0 0;
+    object-fit: cover;
+  }
+  
+  .custom-card .card-body {
+    padding: 20px;
+  }
+  
+  .custom-card .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .custom-card .card-text {
+    font-size: 1.1rem;
+    color: #6c757d;
+  }
+  
+  /* Estilos para listas */
+  .list-group-item {
+    font-size: 1.1rem;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .list-group-item:hover {
+    background-color: #f8f9fa;
+  }
+  
+  h2, h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #343a40;
+  }
+  
+  h3 {
+    font-size: 1.8rem;
+  }
+  
+  .lead.text-center {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+  }
+  
+  /* Ajustes para dispositivos móviles */
+  @media (max-width: 768px) {
+    .custom-jumbotron {
+      padding: 30px;
+    }
+  
+    .custom-btn {
+      padding: 10px 20px;
+    }
+  
+    .custom-card {
+      margin-bottom: 20px;
+    }
+  
+    .custom-card .card-title {
+      font-size: 1.3rem;
+    }
+  
+    h2, h3 {
+      font-size: 1.6rem;
+    }
+  
+    .lead.text-center {
+      font-size: 1rem;
+    }
+  }
+  

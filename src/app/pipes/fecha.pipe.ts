@@ -10,10 +10,10 @@ export class FechaPipe implements PipeTransform {
     const year = parseInt(value, 10);
 
     if (!year || isNaN(year)) {
-      return 'Desconocido';  // Si no es un año válido, devolvemos 'Desconocido'
+      return 'Desconocido';  
     }
 
     const age = currentYear - year;
-    return `${age} años atrás`;  // Regresamos el cálculo de los años
+    return `${age} años atrás`;  
   }
 }

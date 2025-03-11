@@ -1,0 +1,44 @@
+.error-container {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 50px 20px;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50vh;
+  }
+  
+  .error-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .error-message {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .error-container .btn {
+    background-color: #007bff;
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px 30px;
+    border-radius: 5px;
+  }
+  
+  .error-container .btn:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+  }
+  
+  @media (max-width: 768px) {
+    .error-title {
+      font-size: 2rem;
+    }
+  
+    .error-message {
+      font-size: 1rem;
+    }
+  }
+  

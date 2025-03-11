@@ -1,0 +1,83 @@
+/* Contenedor principal */
+.container {
+    max-width: 900px;
+    padding: 20px;
+  }
+  
+  /* Títulos */
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #343a40;
+  }
+  
+  h3, h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #343a40;
+  }
+  
+  /* Tarjetas */
+  .custom-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: none;
+    transition: all 0.3s ease;
+  }
+  
+  .custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #17a2b8;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #6c757d;
+  }
+  
+  /* Estilo de texto */
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Espaciado */
+  .mb-4 {
+    margin-bottom: 30px;
+  }
+  
+  .mt-4 {
+    margin-top: 30px;
+  }
+  
+  .mt-5 {
+    margin-top: 50px;
+  }
+  
+  /* Botones personalizados */
+  .custom-btn {
+    background-color: #17a2b8;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 1rem;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-btn:hover {
+    background-color: #138496;
+  }
+  

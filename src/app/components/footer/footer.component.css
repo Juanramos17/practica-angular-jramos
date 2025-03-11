@@ -1,0 +1,22 @@
+.footer-custom {
+    background-color: #343a40;
+    color: #f8f9fa;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .footer-custom .text-light {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-custom {
+      padding: 10px 0;
+    }
+  }
+  

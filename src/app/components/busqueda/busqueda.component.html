@@ -1,46 +1,42 @@
-<div class="container mt-4">
-    <h2>Búsqueda de Películas</h2>
-  
-    <div class="mb-3">
-      <label for="titulo" class="form-label">Título de la película</label>
-      <input 
-        type="text" 
-        id="titulo" 
-        class="form-control" 
-        [(ngModel)]="titulo" 
-        placeholder="Ingresa el título de la película"
-      />
-    </div>
-  
-    <button class="btn btn-primary" (click)="buscarPeliculas()">Buscar</button>
-  
-    <!-- Mostrar mensaje de carga -->
-    <div *ngIf="cargando" class="mt-3">
-      <p>Cargando...</p>
-    </div>
-  
-    <!-- Mostrar mensaje de error -->
-    <div *ngIf="error" class="alert alert-danger mt-3">
-      <p>{{ error }}</p>
-    </div>
-  
-    <!-- Mostrar las películas encontradas -->
-    <div *ngIf="peliculas.length > 0" class="mt-4">
-      <div *ngFor="let pelicula of peliculas" class="card mb-3">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <!-- Asegúrate de que el campo Poster esté correcto -->
-            <img [src]="pelicula.Poster" class="img-fluid rounded-start" alt="Poster de la película">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">{{ pelicula.Title }}</h5>
-              <p class="card-text"><strong>Año:</strong> {{ pelicula.Year | fecha }}</p> <!-- Usamos la pipe aquí -->
-              <p class="card-text"><small class="text-muted">Tipo: {{ pelicula.Type }}</small></p>
-            </div>
+<div class="container mt-5">
+  <h2 class="text-center text-primary mb-4">Búsqueda de Películas y Series</h2>
+
+  <div class="mb-4">
+    <label for="titulo" class="form-label">Título</label>
+    <input 
+      type="text" 
+      id="titulo" 
+      class="form-control" 
+      [(ngModel)]="titulo" 
+      placeholder="Ingresa el título de la película o serie"
+    />
+  </div>
+
+  <button class="btn btn-primary" (click)="buscarPeliculas()">Buscar</button>
+
+  <div *ngIf="cargando" class="mt-3">
+    <p class="text-center">Cargando...</p>
+  </div>
+
+  <div *ngIf="error" class="alert alert-danger mt-3">
+    <p>{{ error }}</p>
+  </div>
+
+  <div *ngIf="peliculas.length > 0" class="mt-4">
+    <div *ngFor="let pelicula of peliculas" class="card shadow-lg mb-4">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img [src]="pelicula.Poster" class="img-fluid rounded-start" alt="Poster">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-primary">{{ pelicula.Title }}</h5>
+            <p class="card-text"><strong>Año:</strong> {{ pelicula.Year | fecha }}</p>
+            <p class="card-text"><small class="text-muted">Tipo: {{ pelicula.Type }}</small></p>
+            <a [routerLink]="['/detalle', pelicula.imdbID]" class="btn btn-info">Ver detalles</a>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
+</div>
